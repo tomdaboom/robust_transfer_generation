@@ -22,4 +22,4 @@ I may have forgot something but these libraries + their dependencies *should* be
 Included is a pretrained classifier ```./robust_models/trained_model_1.pt``` if you can't be bothered to train your own.
 
 ## Results
-The transferred models seem to be noticably better at producing images than the initial robust classifier, especially when the initial values for $x _i$ are chosen independently of the training set. 
+The transferred models seem to be noticably better at producing images than the initial robust classifier, especially when the initial values for $x _i$ are chosen independently of the training set, or when using smaller numbers of iterations. 
