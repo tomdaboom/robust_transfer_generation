@@ -1,5 +1,5 @@
 ## Description:
-Consider a robust classifier for $d$-dimensional images with $p$ parameters. We define $$\psi : \mathbb{R}^d \times \mathbb{R^p} \rightarrow \mathbb{R}^d$$ to be the result of the pertubation algorithm on that robust classifier (as per [MadryLab/robustness_applications](https://github.com/MadryLab/robustness_applications)). $\psi(x_i; \theta)$ is the result of running the pertubation algorithm from a start point $x_i$ with model parameters $\theta$.
+Consider a robust classifier for $d$-dimensional images with $p$ parameters. We define $$\psi : \mathbb{R}^d \times \mathbb{R^p} \rightarrow \mathbb{R}^d$$ to be the result of the pertubation algorithm on that robust classifier as per [MadryLab/robustness_applications](https://github.com/MadryLab/robustness_applications) (i.e. $\psi(x_i; \theta)$ is the result of running the pertubation algorithm from a start point $x_i$ with model parameters $\theta$).
 
 We then define the following loss function across the parameters of our robust classifier $\theta \in \mathbb{R}^p$ and the elements of our training set $\{x_i\}_{i=1}^n \subset \mathbb{R}^d$,
 
