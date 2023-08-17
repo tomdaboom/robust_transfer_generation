@@ -12,7 +12,7 @@ where $||\cdot||_2$ is the Euclidean norm (i.e. this loss function is the Mean S
 - wandb (if you don't want to use this change the ```USE_WANDB``` flag in ```./train.py```)
 - [Robustness](https://github.com/MadryLab/robustness) (install this directly from github using ```pip install git+https://github.com/MadryLab/robustness```)
 
-I may have forgotten something from this but this *should* be all you need.
+I may have forgot something but these libraries + their dependencies *should* be all you need.
 
 ## Usage
 1. Download [this CIFAR model](http://andrewilyas.com/CIFAR.pt) and put it at ```./robust_models/CIFAR_model.pt```
