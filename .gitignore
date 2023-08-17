@@ -1,3 +1,5 @@
 datasets/*
 robust_models/*
 wandb
+
+!robust_models/trained_model_1.pt
