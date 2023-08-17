@@ -5,7 +5,7 @@ We then define the following loss function across the parameters of our robust c
 
 $$L(\theta, \{x_i\}_{i=1}^n) = \frac{1}{n}\sum_{i = 1}^n ||x_i - \psi(x_i; \theta)||_2^2$$
 
-where $||\cdot||_2$ is the Euclidean norm (i.e. this loss function is the Mean Squared Error function between the start and end points of the pertubation algorithm). We then compute $\tilde{\theta} = \underset{\theta}{\operatorname{argmin}} \; L(\theta, \{x_i\}_{i=1}^n)$ using stochastic gradient descent to yield improved model parameters for image generation. 
+where $\|\cdot\|_2$ is the Euclidean norm (i.e. this loss function is the Mean Squared Error function between the start and end points of the pertubation algorithm). We then compute $\tilde{\theta} = \underset{\theta}{\operatorname{argmin}} \; L(\theta, \{x_i\}_{i=1}^n)$ using stochastic gradient descent to yield improved model parameters for image generation. 
 
 ## Dependencies:
 - Pytorch
