@@ -108,7 +108,7 @@ def train(epochs, learning_rate, mom, eps, step_size, wd, iterations, od):
 if __name__ == "__main__":
     torch.cuda.device(0)
 
-    output_dir = f"./robust_models/trained_model_{sys.argv[1]}_not_transferred.pt"
+    output_dir = f"./robust_models/trained_model_{sys.argv[1]}.pt"
     print(f"Model will be saved to {output_dir}")
 
     lr = 0.05
