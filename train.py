@@ -2,6 +2,7 @@ from robustness import model_utils, datasets
 import torch
 import wandb
 import sys
+import pytorch_ssim
 
 # Constants
 DATA = 'CIFAR' # Choices: ['CIFAR', 'ImageNet', 'RestrictedImageNet']
@@ -29,7 +30,15 @@ def cross_entropy(mod, inp, targ):
     return loss, None
 
 # Loss function used to evalaute the quality of reconstructions
-gen_loss = torch.nn.MSELoss()
+#gen_loss = torch.nn.MSELoss()
+gen_loss = torch.nn.L1Loss()
+'''
+ssim_loss = pytorch_ssim.SSIM()
+def gen_loss(img1, img2):
+    ssim_out = -ssim_loss(img1, img2)
+    ssim_value = - ssim_out.data[0]
+    return ssim_value
+'''
 
 def train(epochs, learning_rate, mom, eps, step_size, wd, iterations, od):
     # Load model to transfer
@@ -50,7 +59,6 @@ def train(epochs, learning_rate, mom, eps, step_size, wd, iterations, od):
     # TRAINING LOOP
     epoch = 0
     while epoch < epochs:
-        # TODO: Properly parallelise this cuz it sucks rn
         for im_seed in train_loader:
             # Get next batch of images
             im_seed = im_seed[0].to('cuda:0').float()

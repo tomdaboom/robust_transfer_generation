@@ -23,3 +23,6 @@ Included is a pretrained classifier ```./robust_models/trained_model_1.pt``` if 
 
 ## Results
 The transferred models seem to be noticably better at producing images than the initial robust classifier, especially when the initial values for $x _i$ are chosen independently of the training set, or when using smaller numbers of iterations. 
+
+## Acknowledgements
+- Code for the SSIM metric taken from [this repo](https://github.com/Po-Hsun-Su/pytorch-ssim)
