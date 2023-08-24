@@ -3,7 +3,7 @@ Consider a robust classifier for $d$-dimensional images with $p$ parameters. We 
 
 We then define the following loss function across the parameters of our robust classifier $\theta \in \mathbb{R}^p$ and the elements of our training set $\lbrace x_i \rbrace _ {i=1}^n \subset \mathbb{R}^d$,
 
-$$L(\theta, \lbrace x_i \rbrace _ {i=1}^n) = \frac{1}{n}\sum_{i = 1}^n \norm x _i - \psi(x _i; \theta) \norm^2 _2 $$
+$$L(\theta, \lbrace x_i \rbrace _ {i=1}^n) = \frac{1}{n}\sum_{i = 1}^n \norm x _i - \psi(x _i; \theta) \norm^2 $$
 
 where $\norm \cdot \norm$ is the Euclidean norm (i.e. this loss function is the Mean Squared Error function between the start and end points of the pertubation algorithm). We then compute $\tilde{\theta} = \underset{\theta}{\textrm{argmin  }}  L(\theta, \lbrace x_i \rbrace _ {i=1}^n)$ using stochastic gradient descent to find better model parameters for image generation across the dataset $\lbrace x_i \rbrace _ {i=1}^n$. 
 
