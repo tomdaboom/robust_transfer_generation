@@ -3,9 +3,9 @@ Consider a robust classifier for $d$-dimensional images with $p$ parameters. We 
 
 We then define the following loss function across the parameters of our robust classifier $\theta \in \mathbb{R}^p$ and the elements of our training set $\lbrace x_i \rbrace _ {i=1}^n \subset \mathbb{R}^d$,
 
-$$L(\theta, \lbrace x_i \rbrace _ {i=1}^n) = \frac{1}{n}\sum_{i = 1}^n ||x _i - \psi(x _i; \theta)||^2$$
+$$L(\theta, \lbrace x_i \rbrace _ {i=1}^n) = \frac{1}{n}\sum_{i = 1}^n || x _i - \psi(x _i; \theta) ||^2 _2$$
 
-where $||\cdot||$ is the Euclidean norm (i.e. this loss function is the Mean Squared Error function between the start and end points of the pertubation algorithm). We then compute $\tilde{\theta} = \underset{\theta}{\textrm{argmin  }}  L(\theta, \{x_i\} _ {i=1}^n)$ using stochastic gradient descent to find better model parameters for image generation across the dataset $\{x_i\}_{i=1}^n$. 
+where $|| \cdot || _2$ is the Euclidean norm (i.e. this loss function is the Mean Squared Error function between the start and end points of the pertubation algorithm). We then compute $\tilde{\theta} = \underset{\theta}{\textrm{argmin  }}  L(\theta, \lbrace x_i \rbrace _ {i=1}^n)$ using stochastic gradient descent to find better model parameters for image generation across the dataset $\lbrace x_i \rbrace _ {i=1}^n$. 
 
 ## Dependencies
 - Pytorch
