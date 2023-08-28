@@ -31,14 +31,12 @@ def cross_entropy(mod, inp, targ):
 
 # Loss function used to evalaute the quality of reconstructions
 #gen_loss = torch.nn.MSELoss()
-gen_loss = torch.nn.L1Loss()
-'''
+#gen_loss = torch.nn.L1Loss()
+
 ssim_loss = pytorch_ssim.SSIM()
 def gen_loss(img1, img2):
-    ssim_out = -ssim_loss(img1, img2)
-    ssim_value = - ssim_out.data[0]
-    return ssim_value
-'''
+    return -ssim_loss(img1, img2)
+
 
 def train(epochs, learning_rate, mom, eps, step_size, wd, iterations, od):
     # Load model to transfer
@@ -134,13 +132,13 @@ if __name__ == "__main__":
     torch.cuda.device(0)
 
     # Format output dir (read cmd line args to do this)
-    output_dir = f"./robust_models/trained_model_{sys.argv[1]}.pt"
+    output_dir = f"./robust_models/trained_model_{sys.argv[1]}_l1loss.pt"
     print(f"Model will be saved to {output_dir}")
 
     # HYPERPARAMETERS
     lr = 0.05
     mom = 0.9
-    epochs = 10000
+    epochs = 2000
     eps = 200
     step_size = 5
     iterations = 10
