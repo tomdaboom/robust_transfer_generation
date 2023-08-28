@@ -3,3 +3,4 @@ robust_models/*
 wandb
 
 !robust_models/trained_model_1.pt
+!robust_models/trained_model_715967_ssim.pt
